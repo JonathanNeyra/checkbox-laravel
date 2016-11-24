@@ -27,7 +27,7 @@ class ResultadosController extends Controller
     //return $ce;
     //return view('resultadosbusqueda', ['ce',$ce]);
 
-     //$name= 'XYZ';
-     return view('resultadosbusqueda')->with('ce',$ce);
+    return view('ejemplo')->with('ce',$ce);
+  
 	}
 }
