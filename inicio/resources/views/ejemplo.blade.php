@@ -64,7 +64,9 @@
         <label for="cat3" class='cat-check'>Valor 3 Categoria</label>
     </div>
     <br>
-    </form>   
+    </form> 
+
+      
 </div>
     @yield('content')
     <!-- Scripts -->
