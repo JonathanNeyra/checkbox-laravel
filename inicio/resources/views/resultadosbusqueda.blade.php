@@ -20,9 +20,21 @@
         
     </head>
     <body>
-<div class="#results">
-   
+    @if(isset($ce))
+<div class="results">
+    
+    <tbody>
+    @foreach ($ce as $value)
+        <tr>
+            <td>{{$value->id_categorias}}</td>
+            <td>{{$value->categoria}}</td>
+        </tr>
+        <br>
+    @endforeach
+    </tbody>
+
 </div>
+    @endif
     @yield('content')
     <!-- Scripts -->
     {!! Html::script('assets/js/bootstrap.min.js') !!}
