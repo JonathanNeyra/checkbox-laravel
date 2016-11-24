@@ -38,9 +38,11 @@
             categorias.push($(this).val());
         });            
         //alert( "Data Loaded: " + categorias );
-        $.post('resultadosbusqueda', {categorias: categorias}, function(ejemplo)
+        $.post('ejemplo', {categorias: categorias}, function()
         {
-            $('#results').html(ejemplo);
+            //$('#prueba').append('prueba');
+            //$('#results').html(ejemplo);
+
         });
     });
 
@@ -49,6 +51,7 @@
     <body>
 <div class="superior">
 <center><h1>Demostracion</h1></center>
+
     <form method="get">
     <br>
     <div class="checkbox checkbox-danger">
@@ -64,9 +67,25 @@
         <label for="cat3" class='cat-check'>Valor 3 Categoria</label>
     </div>
     <br>
-    </form> 
 
-      
+    </form>
+
+    @if(isset($ce))
+<div class="results">
+    
+    <tbody>
+    @foreach ($ce as $value)
+        <tr>
+            <td>{{$value->id_categorias}}</td>
+            <td>{{$value->categoria}}</td>
+        </tr>
+        <br>
+    @endforeach
+    </tbody>
+
+</div>
+    @endif
+
 </div>
     @yield('content')
     <!-- Scripts -->
