@@ -18,11 +18,16 @@ class ResultadosController extends Controller
     //echo $separation;
 
     $ce = DB::table('categorias_ejemplo') -> whereIn('id_categorias', $cate)->get();
-    print_r($ce);
+    //print_r($ce);
 
     //$separation = implode("  |  ", $ce);
     //echo $separation;
 
-    return \View::make('resultadosbusqueda')->with('#results',$ce);
+    //return \View::make('resultadosbusqueda')->with('#results',$ce);
+    //return $ce;
+    //return view('resultadosbusqueda', ['ce',$ce]);
+
+     //$name= 'XYZ';
+     return view('resultadosbusqueda')->with('ce',$ce);
 	}
 }
