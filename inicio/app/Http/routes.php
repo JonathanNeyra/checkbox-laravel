@@ -20,4 +20,4 @@ Route::get('/ejemplo', array('as' => 'redirectejem', function()
    return view('ejemplo');
 }));
 
-Route::post('resultadosbusqueda', 'ResultadosController@searchcategorias');
+Route::post('ejemplo', 'ResultadosController@searchcategorias');
